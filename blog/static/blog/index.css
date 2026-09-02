@@ -1,12 +1,13 @@
 #welcome {
   background: linear-gradient(to right top, #6305dd, #390281);
-  padding: 6rem 12%;
+  padding: 6rem 12% 8rem 12%;
 }
 
 #welcome header {
   display: flex;
-  align-items: flex-start;
-  margin: 3rem auto;
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem auto;
 }
 
 #welcome img {
@@ -19,31 +20,37 @@
   background-color: #ffe1bf;
   transform: rotateZ(-5deg);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  flex-shrink: 0;
 }
 
 #welcome h2 {
   font-size: 3.5rem;
-  margin: 0 0 0 2rem;
+  margin: 0;
   color: #e4e4e4;
-  width: 10rem;
 }
 
 #welcome p {
   color: white;
   font-size: 1.5rem;
+  margin-top: 1rem;
 }
 
 #latest-posts {
   background-color: white;
   padding: 2rem;
   border-radius: 12px;
-  width: 60rem;
+  width: 90%;
+  max-width: 60rem;
   margin: -6rem auto 2rem auto;
   box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.4);
+  position: relative;
+  z-index: 5;
 }
 
 #latest-posts h2 {
   text-align: center;
+  margin-bottom: 2rem;
+  color: #2e2e2e;
 }
 
 #latest-posts ul {
@@ -51,25 +58,49 @@
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 #latest-posts li {
   flex: 1;
+  min-width: 0;
 }
 
 #about {
   text-align: center;
-  padding: 3rem;
+  padding: 3rem 1rem;
   background-color: #e48900;
   margin-top: 5rem;
 }
 
 #about h2 {
   font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
 #about p {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   color: #353535;
+  max-width: 45rem;
+  margin: 0.5rem auto;
+}
+
+@media (max-width: 768px) {
+  #welcome {
+    padding: 6rem 5% 7rem 5%;
+  }
+
+  #welcome header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  #welcome h2 {
+    font-size: 2.5rem;
+  }
+
+  #latest-posts ul {
+    flex-direction: column;
+  }
 }
