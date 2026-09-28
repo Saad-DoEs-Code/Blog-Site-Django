@@ -4,26 +4,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'app.css' %}" />
-    {% block css_files %}
-
-    {% endblock %}
-    <title>
-      {% block title %}
-
-      {% endblock %}
-    </title>
+    {% block css_files %}{% endblock css_files %}
+    <title>{% block title %}Saad Ullah | Software Engineer{% endblock title %}</title>
   </head>
 
   <body>
     <header id="main-navigation">
-      <h1><a href="{% url 'index' %}">Saad's Blog</a></h1>
-      <nav>
-        <a href="{% url 'posts' %}">All Posts</a>
+      <div class="nav-brand">
+        <a href="{% url 'index' %}" class="brand-link">
+          <span class="brand-code">&lt;Saad /&gt;</span>
+          <span class="brand-tag">Software Engineer &bull; Unity | Django | React</span>
+        </a>
+      </div>
+      <nav class="nav-links">
+        <a href="{% url 'index' %}" class="nav-link">Home</a>
+        <a href="{% url 'posts' %}" class="nav-link">All Posts</a>
+        <a href="mailto:saad@spacegame.dev" class="nav-contact-btn">Contact</a>
       </nav>
     </header>
-    {% block content %}
 
-    {% endblock %}
+    <main id="page-container">
+      {% block content %}{% endblock content %}
+    </main>
+
+    <footer id="main-footer">
+      <div class="footer-content">
+        <p>&copy; 2026 Saad Ullah. Software Engineer mastering Unity, Django, and React.</p>
+        <p><a href="mailto:saad@spacegame.dev" class="footer-mailto">saad@spacegame.dev</a></p>
+      </div>
+    </footer>
   </body>
 </html>
+

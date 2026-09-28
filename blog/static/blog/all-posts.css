@@ -1,30 +1,67 @@
-body {
-  background-color: #f4f4f6;
-}
-
-#main-navigation {
-  background-color: #390281;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-}
-
 #all-posts {
-  margin: 7rem auto 4rem auto;
-  width: 90%;
-  max-width: 60rem;
+  padding: 4rem 8%;
+  max-width: 70rem;
+  margin: 0 auto;
 }
 
-#all-posts h2 {
-  text-align: center;
-  font-size: 2.25rem;
-  color: #2e2e2e;
-  margin: 2rem 0 2.5rem 0;
+.all-posts-header {
+  margin-bottom: 3rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-subtle);
 }
 
-#all-posts ul {
-  list-style: none;
+.header-meta {
+  margin-bottom: 0.75rem;
+}
+
+.posts-count {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent-cyan);
+  background-color: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  padding: 0.25rem 0.65rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  color: var(--text-main);
+}
+
+.page-description {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  max-width: 42rem;
   margin: 0;
+  line-height: 1.5;
+}
+
+.all-posts-grid {
+  list-style: none;
   padding: 0;
+  margin: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
   gap: 1.75rem;
 }
+
+.no-posts-found {
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+  #all-posts {
+    padding: 2.5rem 5%;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+}
+
