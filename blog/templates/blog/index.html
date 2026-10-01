@@ -1,12 +1,12 @@
-{% extends "base.html" %} 
-{% load static %} 
+{% extends "base.html" %}
+{% load static %}
 
 {% block css_files %}
 <link rel="stylesheet" href="{% static 'blog/post.css' %}" />
 <link rel="stylesheet" href="{% static 'blog/index.css' %}" />
-{% endblock css_files %} 
+{% endblock css_files %}
 
-{% block title %}Saad Ullah | Software Engineer (Unity, Django &amp; React){% endblock title %} 
+{% block title %}Saad Ur Rehman | Software Engineer (Unity, Django &amp; React){% endblock title %}
 
 {% block content %}
 
@@ -14,18 +14,19 @@
   <div class="welcome-container">
     <div class="welcome-profile">
       <div class="avatar-frame">
-        <img src="{% static 'blog/images/saad.jpg' %}" alt="Saad Ullah - Software Engineer" class="profile-avatar" />
+        <img src="{% static 'blog/images/saad.jpg' %}" alt="Saad ur Rehman - Software Engineer" class="profile-avatar" />
       </div>
     </div>
-    
+
     <div class="welcome-text">
       <div class="status-indicator">
         <span class="status-dot"></span>
         <span class="status-label">Software Engineer / Unity, Django &amp; React</span>
       </div>
-      <h1 class="welcome-heading">Saad Ullah</h1>
+      <h1 class="welcome-heading">Saad ur Rehman</h1>
       <p class="welcome-subhead">
-        Software Engineer mastering Unity Game Development, Django Web Development, and React. Enthusiast of space exploration and PC games.
+        Software Engineer mastering Unity Game Development, Django Web Development, and React. Enthusiast of space
+        exploration and PC games.
       </p>
       <div class="welcome-actions">
         <a href="{% url 'posts' %}" class="btn-primary">Explore Articles</a>
@@ -43,9 +44,9 @@
 
   <ul class="posts-grid">
     {% for post in posts %}
-      {% include "blog/includes/post.html" %}
+    {% include "blog/includes/post.html" %}
     {% empty %}
-      <p class="no-posts">No articles published yet.</p>
+    <p class="no-posts">No articles published yet.</p>
     {% endfor %}
   </ul>
 </section>
@@ -53,13 +54,14 @@
 <section id="about">
   <div class="about-container">
     <h2 class="section-title">Engineering Focus &amp; Core Disciplines</h2>
-    
+
     <div class="focus-grid">
       <div class="focus-card">
         <div class="focus-code">[01]</div>
         <h3>Unity Game Development</h3>
         <p>
-          Architecting 2D/3D games, custom gameplay mechanics, C# engine scripts, shader effects, and real-time game loops.
+          Architecting 2D/3D games, custom gameplay mechanics, C# engine scripts, shader effects, and real-time game
+          loops.
         </p>
       </div>
 
@@ -67,7 +69,8 @@
         <div class="focus-code">[02]</div>
         <h3>Django Web Development</h3>
         <p>
-          Building robust server-side web applications, custom ORM models, secure RESTful APIs, and database architecture.
+          Building robust server-side web applications, custom ORM models, secure RESTful APIs, and database
+          architecture.
         </p>
       </div>
 
@@ -98,5 +101,3 @@
 </section>
 
 {% endblock content %}
-
-

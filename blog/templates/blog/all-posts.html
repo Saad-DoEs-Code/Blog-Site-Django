@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="{% static 'blog/all-posts.css' %}" />
 {% endblock css_files %}
 
-{% block title %}All Posts | Saad Ullah - Software Engineer{% endblock title %}
+{% block title %}All Posts | Saad ur Rehman - Software Engineer{% endblock title %}
 
 {% block content %}
 <section id="all-posts">
@@ -22,10 +22,10 @@
 
   <ul class="all-posts-grid">
     {% for post in all_posts %}
-      {% include "blog/includes/post.html" %}
+    {% include "blog/includes/post.html" %}
     {% empty %}
-      <p class="no-posts-found">No articles found.</p>
+    <p class="no-posts-found">No articles found.</p>
     {% endfor %}
   </ul>
 </section>
-{% endblock content %}
+{% endblock content %}

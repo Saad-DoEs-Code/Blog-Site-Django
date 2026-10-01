@@ -32,8 +32,8 @@
   font-family: var(--font-mono);
   font-size: 0.75rem;
   color: var(--accent-cyan);
-  background-color: rgba(56, 189, 248, 0.08);
-  border: 1px solid rgba(56, 189, 248, 0.25);
+  background-color: rgba(226, 232, 240, 0.08);
+  border: 1px solid rgba(226, 232, 240, 0.25);
   border-radius: 4px;
   padding: 0.25rem 0.6rem;
   text-transform: uppercase;
@@ -167,7 +167,7 @@
   font-size: 0.85rem;
   color: var(--accent-cyan);
   border: 1px solid var(--accent-cyan);
-  background-color: rgba(56, 189, 248, 0.05);
+  background-color: rgba(226, 232, 240, 0.05);
   border-radius: 4px;
   padding: 0.65rem 1.2rem;
   text-decoration: none;

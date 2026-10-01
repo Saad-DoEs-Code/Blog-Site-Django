@@ -3,7 +3,7 @@ from .models import Post
 
 
 def index(request):
-    latest_posts = Post.objects.all().order_by("-date")[:3]
+    latest_posts = Post.objects.all().order_by("-date")[:4]
     return render(request, "blog/index.html", {"posts": latest_posts})
 
 
